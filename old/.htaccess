@@ -1,0 +1,23 @@
+# Use PHP5 as default
+# AddHandler application/x-httpd-php5 .php4 .php .php3 .php2 .phtml	
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+Options -multiviews
+
+#DirectoryIndex 
+DirectoryIndex index.php
+
+#  handle any 404 errors.
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /
+
+RedirectMatch 301 ^/mail$ https://mail.google.com/a/brand786.com
+RedirectMatch 301 ^/nas$ https://brand786.synology.me:5001/
+RedirectMatch 301 ^/staff$ https://brand786.synology.me:5001/fm
+RedirectMatch 301 ^/status$ http://www.webhostingstatus.com
+RedirectMatch 301 ^/setupoutlook$ http://help.outlook.com/en-gb/140/ms.exch.ecp.useoutlookanywhere.aspx
+RedirectMatch 301 ^/setupgmail$ https://support.google.com/mail/troubleshooter/1668960
