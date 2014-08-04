@@ -34,7 +34,4 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 </head>
 <body class="royal_loader">
-			<div class="project-info">
-				<h6>Get in touch with us</h6>
-				<p>Do you like what you see? Give us a call on 0800 689 0786 or email <a href="mailto:info@brand786.com">info@brand786.com</a> to discuss your project.</p>
-			</div>
+			
