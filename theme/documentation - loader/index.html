@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>MelonHTML5 - Royal Preloader</title>
+        <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreRDark.css"/>
+        <link type="text/css" rel="stylesheet" href="assets/style.css"/>
+        <script type="text/javascript" src="assets/jquery.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushJScript.js"></script>
+        <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPhp.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                SyntaxHighlighter.all();
+            });
+        </script>
+    </head>
+    <body>
+        <header></header>
+        <div id="wrapper">
+            <h1>JavaScript & CSS</h1>
+            <p>Include JavaScript and CSS files in <b>HEAD</b> tag.<br> <b>jQuery UI</b> is only required when multiple backgrounds are enabled in IE7,8,9.</p>
+            <pre class="brush: js; toolbar: false; auto-links: false;">
+                <head>
+                    &lt;link rel="stylesheet" type="text/css" href="royal_preloader.css" /&gt;
+                    &lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+                    &lt;script type="text/javascript" src="royal_preloader.min.js"&gt;&lt;/script&gt;
+                    &lt;script type="text/javascript"&gt;
+                        var images = {
+                            'wallpaper1':     'http://www.melonhtml5.com/images/wallpaper/1.jpg',
+                            'wallpaper2':     'http://www.melonhtml5.com/images/wallpaper/2.jpg',
+                            'wallpaper3':     'http://www.melonhtml5.com/images/wallpaper/3.jpg',
+                            'Metro Gallery':  'http://www.melonhtml5.com/images/metro_gallery.png',
+                            'Emu Slider':     'http://www.melonhtml5.com/images/emu_slider.png',
+                            'Cut the Rope':   'http://www.melonhtml5.com/images/cut_the_rope.png',
+                            'All in One Tab': 'http://www.melonhtml5.com/images/tab.png'
+                        };
+
+                        // config
+                        Royal_Preloader.config({
+                            mode:       'number',
+                            images:     images,
+                            timeout:    10,
+                            showInfo:   true,
+                            background: ['#000000', '#FF0000', '#0097AA', '#F29500', '#C23916', '#94C849', '#6FA014', '#91009B']
+                        });
+                    &lt;/script&gt;
+                </head>
+            </pre>
+            <div class="hr"></div>
+            <h1>HTML Code</h1>
+            <p>Add a class name "royal_loader" to the BODY tag</p>
+            <pre class="brush: js; toolbar: false;">
+                &lt;body class="royal_loader"&gt;
+            </pre>
+            <div class="hr"></div>
+            <h1>Configurations</h1>
+            <ul>
+                <li>
+                    <div class="opt_name"><b>mode</b><span class="t">string</span></div>
+                    <div class="opt_detail">Default value: <span class="c">number</span><br>Possible values: <span class="c">text</span>, <span class="c">number</span>, <span class="c">logo</span>.
+                    <br><span class="c">number</span>: a loader image is shown, the loading progress is displayed in percentage values and loading details are also displayed on each image load.
+                    <br><span class="c">text</span>: a pre-defined text will be displayed in the center of the screen, and fades out from left ro right.
+                    <br><span class="c">logo</span>: displaying a logo in the screen center, and fades out from bottom to top.
+                    </div>
+                    <pre class="brush: js; toolbar: false; auto-links: false;">
+                        Royal_Preloader.config({
+                            mode: "text"
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>images</b><span class="t">JSON</span></div>
+                    <div class="opt_detail">Default value: <span class="c">empty</span>.<br>Define images to be preloaded. Format: {name: image_url}. "name" is displayed when <span class="c">showInfo</span> is turned on.</div>
+                    <pre class="brush: js; toolbar: false; auto-links: false;">
+                        var images = {
+                            'wallpaper1':     'http://www.melonhtml5.com/images/wallpaper/1.jpg',
+                            'wallpaper2':     'http://www.melonhtml5.com/images/wallpaper/2.jpg',
+                            'wallpaper3':     'http://www.melonhtml5.com/images/wallpaper/3.jpg',
+                            'Metro Gallery':  'http://www.melonhtml5.com/images/metro_gallery.png',
+                            'Emu Slider':     'http://www.melonhtml5.com/images/emu_slider.png',
+                            'Cut the Rope':   'http://www.melonhtml5.com/images/cut_the_rope.png',
+                            'All in One Tab': 'http://www.melonhtml5.com/images/tab.png'
+                        };
+
+                        Royal_Preloader.config({
+                            images: images
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>timeout</b><span class="t">Int</span></div>
+                    <div class="opt_detail">Default value: <span class="c">10</span> (seconds).<br>When timeout is exceeded, no matter images have been all downloaded or not, the loading screen will finish and your website will be shown.</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            timeout: 10
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>opacity</b><span class="t">Int</span></div>
+                    <div class="opt_detail">Default value: <span class="c">1</span>.<br>Possible values: 0 ~ 1. When opacity is set to be less than 1, the loading overlay will have a transparent backgorund and you will be able to see through the website.</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            opacity: 0.5
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>background</b><span class="t">array</span></div>
+                    <div class="opt_detail">Default value: <span class="c">["#000000"]</span>.<br>An array containing the colors for the background. Colours transit from one to another during loading.</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            backgorund: ['#000000', '#FF0000', '#0097AA', '#F29500', '#C23916', '#94C849', '#6FA014', '#91009B']
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>text</b><span class="t">String</span></div>
+                    <div class="opt_detail">Default value: <span class="c">loading...</span><br>Set the loading text. (this only works when mode is set to "text")</div>
+                    <pre class="brush: js; toolbar: false; auto-links: false;">
+                        Royal_Preloader.config({
+                            text: "MelonHTML5 - Royal Preloader..."
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>logo</b><span class="t">string</span></div>
+                    <div class="opt_detail">Default value: <span class="c">empty string</span>.<br>The URL of the logo image. (this only works when mode is set to "logo")</div>
+                    <pre class="brush: js; toolbar: false; auto-links: false;">
+                        Royal_Preloader.config({
+                            logo: 'http://www.example.com/logo.jpg'
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>showPercentage</b><span class="t">Boolean</span></div>
+                    <div class="opt_detail">Default value: <span class="c">true</span>.<br>Show the loading progress in percentage values. (this only works when mode is set to "number")</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            showPercentage: true
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>showInfo</b><span class="t">Boolean</span></div>
+                    <div class="opt_detail">Default value: <span class="c">true</span>.<br>When showInfo is set to true, image names are displayed in the loading screen. (this only works when mode is set to "number")</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            showInfo: true
+                        });
+                    </pre>
+                </li>
+                <li>
+                    <div class="opt_name"><b>onComplete</b><span class="t">Function</span></div>
+                    <div class="opt_detail">Default value: <span class="c">null</span>.<br>Callback function to be executed after loading is completed.</div>
+                    <pre class="brush: js; toolbar: false;">
+                        Royal_Preloader.config({
+                            onComplete: function() {
+                                alert('Woo hoo, loading images are complete');
+                            }
+                        });
+                    </pre>
+                </li>
+            </ul>
+            <div class="hr"></div>
+            <h1>Loader Image</h1>
+            <p>To change the loader image, simply create a <span class="c">loader.gif</span> in <b>images</b> folder.
+        </div>
+        <footer>
+            <a href="http://www.melonhtml5.com" target="_blank">@ MelonHTML5</a>
+        </footer>
+    </body>
+</html>

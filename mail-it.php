@@ -1,33 +1,29 @@
 <?php
-    function cleanupentries($entry) {
-                $entry = trim($entry);
-                $entry = stripslashes($entry);
-                $entry = htmlspecialchars($entry);
+    
+        function cleanupentries($entry) {
+            $entry = trim($entry);
+            $entry = stripslashes($entry);
+            $entry = htmlspecialchars($entry);
 
-                return $entry;
+            return $entry;
         }
 
-    $f_name = cleanupentries($_POST["name"]);
-    $f_email = cleanupentries($_POST["email"]);
-    $f_phone = cleanupentries($_POST["phone"]);
-    $f_time = cleanupentries($_POST["time"]);
-    $f_message = cleanupentries($_POST["message"]);
-    $f_alt_email = cleanupentries($_POST["alt_email"]);
-    $from_ip = $_SERVER['REMOTE_ADDR'];
-    $from_browser = $_SERVER['HTTP_USER_AGENT'];
-    
-    if($f_alt_email != '') {
-        
-    }
-    else {
+        $f_name = cleanupentries($_POST["name"]);
+        $f_email = cleanupentries($_POST["email"]);
+        $f_phone = cleanupentries($_POST["phone"]);
+        $f_time = cleanupentries($_POST["time"]);
+        $f_message = cleanupentries($_POST["message"]);
+        $from_ip = $_SERVER['REMOTE_ADDR'];
+        $from_browser = $_SERVER['HTTP_USER_AGENT'];
+
         include 'db-details.php';
 
         $mysqli= new mysqli("localhost","$u","$p","$db");
 
         $con=mysqli_connect("localhost","$u","$p","$db");
 
-        if(!$mysqli->query("INSERT INTO email_backup ( ID, Name , Email , Telephone, Contact_Time, Requirements) 
-            VALUES ('NULL','$f_name','$f_email','$f_phone','$f_time','$f_message')")
+        if(!$mysqli->query("INSERT INTO email_backup ( ID, Name , Email , Telephone, Contact_Time, Requirements, IP) 
+            VALUES ('NULL','$f_name','$f_email','$f_phone','$f_time','$f_message','$from_ip')")
         ){
             echo 'Error: ('.$mysqli->errno . ") " . $mysqli->error;
         }
@@ -70,10 +66,10 @@
                             exit;
                     }
             }
-        echo "this is mail.php";
         }
         if($mysqli->errno) {
 
         }
-    }
+    
+    
 ?>

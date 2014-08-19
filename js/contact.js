@@ -34,23 +34,39 @@ function doForm(){
 function recapVerify(){
     var data_string = $('#ajax-form').serialize();
     $.ajax({
-        type: "POST",
-        url: $('#ajax-form').attr('action'),
-        data: data_string,
-        timeout: 6000,
-        error: function(request,error) {
-            if (error == "timeout") {
-                $('#err-timedout').slideDown('slow');
-            }
-            else {
-                $('#err-state').slideDown('slow');
-                $("#err-state").html('An error occurred: ' + error + '');
-            }
-        },
-        success: function(data) {
-            $('#ajax-form').slideUp('slow');
-            $('#ajaxsuccess').slideDown('slow');
+        type:'post',
+        url: './captcha.php',
+        data: {
+            recaptcha_challenge_field:$('#recaptcha_challenge_field').val(),
+            recaptcha_response_field:$('#recaptcha_response_field').val()
         }
+    }).done(function(data, textStatus, jqXHR){
+        if (data == 'success'){
+            $('#err').addClass('hidden');
+            $.ajax({
+                type: "POST",
+                url: $('#ajax-form').attr('action'),
+                data: data_string,
+                timeout: 6000,
+                error: function(request,error) {
+                    if (error == "timeout") {
+                        $('#err-timedout').slideDown('slow');
+                    }
+                    else {
+                        $('#err-state').slideDown('slow');
+                        $("#err-state").html('An error occurred: ' + error + '');
+                    }
+                },
+                success: function(data) {
+                    $('#ajax-form').slideUp('slow');
+                    $('#ajaxsuccess').slideDown('slow');
+                }
+            });
+        } else {
+            $('#err').removeClass('hidden');
+        }
+    }).fail(function(jqXHR,textStatus,errorThrown){
+        console.log('proxy or service failure');
     });
 }
 

@@ -22,13 +22,13 @@
 
 $('ul.slimmenu').on('click',function(){
 var width = $(window).width(); 
-if ((width <= 800)){ 
+if ((width <= 1000)){ 
     $(this).slideToggle(); 
 }	
 });				
 $('ul.slimmenu').slimmenu(
 {
-    resizeWidth: '800',
+    resizeWidth: '1000',
     collapserTitle: '',
     easingEffect:'easeInOutQuint',
     animSpeed:'medium',

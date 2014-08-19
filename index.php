@@ -7,8 +7,8 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>BRAND786 | Interactive Media & Marketing Agency</title>
-	<meta name="description" content="Brand786 | Interactive Media & Marketing Agency | We create dynamic and interactive projects for clients across strategic design, marketing campaigns, online presence, creative motion, social media optimisation and marketing analysis">
+	<title>BRAND786 | Digital Marketing Agency</title>
+	<meta name="description" content="Brand786 | Digital Marketing Agency | We create dynamic and interactive projects for clients across strategic design, marketing campaigns, online presence, creative motion, social media optimisation and marketing analysis">
 	<meta name="author" content="web design, creative motion, marketing, google analytics, social media optimisation, website development, mobile development">
 
 	<!-- Mobile Specific Metas
@@ -42,7 +42,15 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="b786-apple-touch-icon-114x114.png">
 	
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
         <script type='text/javascript' src='js/contact.js'></script>
+        
+         <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
 </head>
 <body class="royal_loader">	
 	<!-- Primary Page Layout
@@ -504,7 +512,7 @@
 					<div id="action">	
 						<div class="container">	
 							<div class="sixteen columns">
-								<h6>WE DELIVER YOUR VISION THROUGH INTERACTIVE MEDIA & MARKETING</h6> 
+								<h6>WE DELIVER YOUR VISION THROUGH DIGITAL MARKETING</h6> 
 								<p><small><span>We understand you, arrange a callback...</span></small></p>
 							</div>	
 						</div>			
@@ -683,6 +691,13 @@
 								<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
 								<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
 								<div class="error" id="err-state"></div>
+                                                                <div id="recapcont">
+                                                                <?php
+                                                                    require_once('recaptchalib.php');
+                                                                    $publickey = "6LeHg_YSAAAAAACOtzSaeQ0UGK8PCc3xWx62N-7S"; // you got this from the signup page
+                                                                    echo recaptcha_get_html($publickey);
+                                                                ?>
+                                                                </div>
 							</form>
 							<div id="ajaxsuccess">Thank you, your call back has been arranged | A project consultant will be touch</div>	
 						</div>

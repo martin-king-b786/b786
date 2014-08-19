@@ -64,6 +64,10 @@
 		overflow-x:hidden; 
 	height:100%;
 }
+
+#careers h1 {
+    margin-top: 50px;
+}
 /* #Typography
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
@@ -127,7 +131,11 @@
 	li p { line-height: 21px; }
 /* #Buttons
 ================================================== */
-
+        div#recapcont {
+            width: 450px;
+            margin: 20px auto;
+        }
+        
 	.button,
 	button,
 	input[type="submit"],

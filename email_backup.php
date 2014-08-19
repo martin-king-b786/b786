@@ -13,6 +13,7 @@
             <th>Telephone</th>
             <th>Contact Time</th>
             <th>Requirements</th>
+            <th>IP</th>
             <th><button>Delete</button></th>
         </thead>
         <?php
@@ -20,7 +21,7 @@
 
             $mysqli= new mysqli("localhost","$u","$p","$db");
 
-            $getrec = $mysqli->query("SELECT * FROM email_backup ORDER BY Timestamp DESC LIMIT 10 ");
+            $getrec = $mysqli->query("SELECT * FROM email_backup ORDER BY Timestamp DESC LIMIT 1000 ");
 
             while($record = mysqli_fetch_array( $getrec )) {   
                 ?>
@@ -32,6 +33,7 @@
                 <td><?php echo $record['Telephone']; ?></td>
                 <td><?php echo $record['Contact_Time']; ?></td>
                 <td><?php echo $record['Requirements']; ?></td>
+                <td><?php echo $record['IP']; ?></td>
                 <td><input name="id" value="<?php echo strtolower($record['ID']); ?>" type="checkbox"/></td>
             </tr>
         <?php

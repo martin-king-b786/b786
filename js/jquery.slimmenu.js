@@ -10,7 +10,7 @@
     var pluginName = "slimmenu",
         defaults =
         {
-            resizeWidth: '768',
+            resizeWidth: '1000',
             collapserTitle: 'Main Menu',
             animSpeed: 'medium',
             easingEffect: null,
