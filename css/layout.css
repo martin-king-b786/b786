@@ -760,6 +760,7 @@ div#recaptcha_image {
             margin: 10px 0;
             border: 1px #eeeeee solid;
             background: rgba(225,225,225,0.5);
+            position: static;
         }
         
             #email-details td {
@@ -767,7 +768,7 @@ div#recaptcha_image {
                 padding: 5px 10px;
             }
             
-            input#alt_email {
+            form label:nth-of-type(2n), form input:nth-of-type(2n) {
                 display: none;
             }
             

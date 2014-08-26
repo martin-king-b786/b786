@@ -46,11 +46,7 @@
         <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
         <script type='text/javascript' src='js/contact.js'></script>
         
-         <script type="text/javascript">
- var RecaptchaOptions = {
-    theme : 'clean'
- };
- </script>
+         
 </head>
 <body class="royal_loader">	
 	<!-- Primary Page Layout
@@ -87,6 +83,9 @@
 									<a class="scroll" href="#services">what we do</a>
 								</li>
 							</ul>
+						</li>
+                                                <li>
+							<a class="scroll" href="#careers">careers</a>
 						</li>
 						<li>
 							<a class="scroll" href="#contact">arrange callback</a>
@@ -655,7 +654,65 @@
 					</div>
 				</div>		
 			</div>		
-
+                        
+                        <div id="careers">
+				<div class="container">
+					<div class="sixteen columns">
+						<h1><span>CAREERS</span></h1>
+						<div class="head-subtext">Brand786 is always looking for the best young talent to join its ever growing global team. We look for hard working creative individuals who have a passion for marketing and personal development, can you see yourself working in a digital marketing agency shooting for the stars? Apply below:</div>
+					</div>
+					<div class="clear"></div>
+					<div class="one-third column" data-scrollreveal="enter left and move 150px over 1s">
+                                            <div class="services-offer">
+                                                <h6>Graphic Designer</h6>
+                                                <!--<div class="services-icon">19</div>-->
+                                                <p><!-- INSERT JOB DESCRIPTION HERE -->Do you have the ability to create groundbreaking unique designs?. Brand786 does not compromise on quality and this graphic designer needs to share and embody this vision and embed their creativity across design, branding and campaigns. Skills needed:</p>
+                                                <div class="services-list">
+                                                    <ul class="list-services">
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Hardworking, Organised & Creative</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Adobe Photoshop, Illustrator & InDesign</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE --> Up to £21K PA | <a href="http://brand786.com/docs/GraphicDesigner.pdf" target="_blank">Job Description</a></p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Apply now with your CV & portfolio</p></li>
+                                                    </ul>
+                                                </div>
+                                                <a href="mailto:hr@brand786.com?subject=I am an awesome graphic designer! Hire me…"<!-- INSERT SUBJECT LINE ON OTHER SIDE OF QUOTE --><div class="services-link">APPLY HERE</div></a>
+                                            </div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter bottom and move 150px over 1s">
+						<div class="services-offer featured">
+							<h6><!-- INSERT JOB TITLE HERE -->Digital & Social Campaign Manager</h6>
+                                                <!--<div class="services-icon">19</div>-->
+                                                <p><!-- INSERT JOB DESCRIPTION HERE -->Are you a digital marketer who can create & manage campaigns across multiple channels? Are you skilful enough to manage multiple brands, develop marketing plans and execute them? If yes then apply. Skills needed:</p>
+                                                <div class="services-list">
+                                                    <ul class="list-services">
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Branding, Campaign Creation & Implementation</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Mail Chimp, Photoshop, Hootsuite, MS Office</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE --> Up to £21K PA | <a href="http://www.brand786.com/docs/DigitalSocialMediaCampaignManager.pdf" target="_blank">Job Description</a></p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Apply now with your Covering letter & CV:</p></li>
+                                                    </ul>
+                                                </div>
+                                                <a href="mailto:hr@brand786.com?subject=I create brands and campaigns in my sleep! Hire me…"<!-- INSERT SUBJECT LINE ON OTHER SIDE OF QUOTE --><div class="services-link">APPLY HERE</div></a>
+						</div>
+					</div>
+					<div class="one-third column" data-scrollreveal="enter right and move 150px over 1s">
+						<div class="services-offer">
+							<h6><!-- INSERT JOB TITLE HERE -->Work Experience</h6>
+                                                <!--<div class="services-icon">19</div>-->
+                                                <p><!-- INSERT JOB DESCRIPTION HERE -->Brand786 aims to build futures, no matter how young. If you are currently in full time education you can apply work experience with Brand786. (Due to high number of requests we can not guarantee your chosen date will be available).</p>
+                                                <div class="services-list">
+                                                    <ul class="list-services">
+                                                        <li><p><!-- INSERT JOB POINT HERE -->GCSE Students - 1-2 week experience</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->6th Form/College & University Students</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Great to add to CV and experenice</p></li>
+                                                        <li><p><!-- INSERT JOB POINT HERE -->Apply now with why you should be selected:</p></li>
+                                                    </ul>
+                                                </div>
+                                                <a href="mailto:hr@brand786.com?subject=I am young hip and cool! Hire me…"<!-- INSERT SUBJECT LINE ON OTHER SIDE OF QUOTE --><div class="services-link">APPLY HERE</div></a>
+						</div>
+					</div>
+				</div>
+			</div>
+                        
 			<div id="contact">				
 				<div class="just_pattern"></div>
 				<div class="just_pattern1"></div>
@@ -671,33 +728,42 @@
 									<span class="error" id="err-name">please enter name</span>
 								</label>
 								<input name="name" id="name" type="text" />
+                                                                <!-- -->
+                                                                <label for="address">Address</label>
+								<input name="address" id="address" type="text" />
+                                                                
+                                                                
 								<label for="email">E-Mail: *
 									<span class="error" id="err-email">please enter e-mail</span>
 									<span class="error" id="err-emailvld">e-mail is not a valid format</span>
 								</label>
 								<input name="email" id="email" type="text" />
-								<input name="alt_email" id="alt_email" type="text" placeholder="Alternative Email" />
-                                                                <label for="phone">Telephone:
-								</label>
+                                                                <!-- -->
+                                                                <label for="alt_email">Alternative Email</label>
+								<input name="alt_email" id="alt_email" type="text" />
+                                                                
+                                                                
+                                                                <label for="phone">Telephone:</label>                                                                
 								<input name="phone" id="phone" type="text" />
-								<label for="time">Best time to call (e.g Tuesday, 12:00 - 14:00):
-								</label>
+                                                                <!-- -->
+                                                                <label for="fax">Fax</label>
+								<input name="fax" id="fax" type="text" />
+                                                                
+                                                                
+								<label for="time">Best time to call (e.g Tuesday, 12:00 - 14:00):</label>
 								<input name="time" id="time" type="text" />
-								<label for="message">In brief tell us your requirements: 
-								</label>
+                                                                <!-- -->
+                                                                <label for="contact">Point of Contact</label>
+								<input name="contact" id="contact" type="text" />
+                                                                
+                                                                
+								<label for="message">In brief tell us your requirements:</label>
 								<textarea name="message" id="message"></textarea>
                                                                 
 								<div id="button-con"><button class="send_message" id="send">Arrange Callback</button></div>	
 								<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
 								<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
 								<div class="error" id="err-state"></div>
-                                                                <div id="recapcont">
-                                                                <?php
-                                                                    require_once('recaptchalib.php');
-                                                                    $publickey = "6LeHg_YSAAAAAACOtzSaeQ0UGK8PCc3xWx62N-7S"; // you got this from the signup page
-                                                                    echo recaptcha_get_html($publickey);
-                                                                ?>
-                                                                </div>
 							</form>
 							<div id="ajaxsuccess">Thank you, your call back has been arranged | A project consultant will be touch</div>	
 						</div>
