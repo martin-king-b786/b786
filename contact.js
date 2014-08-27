@@ -89,31 +89,3 @@ $(document).ready(function(){
     $('input[type="checkbox"]').change(checkRecord);
 });
 
-
-function findDate() {
-    $searchDate = $('input').val();
-    console.log($searchDate);
-    $('tbody > tr').each(function(){
-        $ts = $(this).children('td').eq(1);
-        $timestamp = $ts.html();
-        
-        $date = $timestamp.substring(0 , 10);
-        
-        if($date === $searchDate) {
-            $('tbody > tr').css({
-                background : ''
-            });
-            $('body').scrollTop($(this).offset().top);
-            $(this).css({
-                background : 'green'
-            });
-            
-            return false;
-            
-        }
-    });
-}
-
-$(document).ready(function(){
-    $('#search button').click(findDate);
-});

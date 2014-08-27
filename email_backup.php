@@ -3,6 +3,12 @@
     <link rel="stylesheet" href="css/layout.css"/>
     <script type='text/javascript' src='js/contact.js'></script>
 </head>
+
+<div id="search">
+    <input name="date" type="date"/>
+    <button>Search</button>
+</div>
+
 <form action="delete-record.php" name="details-form" id="details-form" method="post" onsubmit="return deleteRecords()">
     <table id="email-details">
         <thead>
@@ -25,7 +31,7 @@
 
             while($record = mysqli_fetch_array( $getrec )) {   
                 ?>
-            <tr class="<?php echo strtolower($record['Name']); ?>" id="id-<?php echo $record['ID']; ?>">
+            <tr id="id-<?php echo $record['ID']; ?>">
                 <td class="detail-id" id="<?php echo $record['ID']; ?>"><?php echo $record['ID']; ?></td>
                 <td><?php echo $record['Timestamp']; ?></td>
                 <td><?php echo $record['Name']; ?></td>

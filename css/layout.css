@@ -750,6 +750,16 @@ div#recaptcha_image {
 
     /* Email Details */
     
+    #search {
+        position: fixed;
+        top: 35px;
+        left: 0px;
+        width: 120px;
+        padding: 10px;
+        background: #ffffff;
+        border: 1px #000000 solid;
+        border-left: 0;
+    }
     #email-details {
         width: 100%;
     }
@@ -775,6 +785,8 @@ div#recaptcha_image {
             .detail-id {
                 display: none;
             }
+            
+            
 @media only screen and (min-width: 1930px) { .parallax-home { background-size: cover; } }
  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 	.parallax-home { background-size: cover; background-attachment: scroll; background-position: top center!important; }
