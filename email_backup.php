@@ -7,6 +7,7 @@
 <div id="search">
     <input name="date" type="date"/>
     <button>Search</button>
+    <div class="close"></div>
 </div>
 
 <form action="delete-record.php" name="details-form" id="details-form" method="post" onsubmit="return deleteRecords()">
