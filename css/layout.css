@@ -759,7 +759,31 @@ div#recaptcha_image {
         background: #ffffff;
         border: 1px #000000 solid;
         border-left: 0;
+        overflow: hidden;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
     }
+    #search.hide {
+        left: -125px;
+        opacity: 1;
+    }
+        
+        #search .close {
+            position: absolute;
+            background: black;
+            height: 20px;
+            width: 20px;
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        #search.hide .close {
+            right: 5px;
+        }
+    
     #email-details {
         width: 100%;
     }

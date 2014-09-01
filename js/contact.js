@@ -91,8 +91,7 @@ $(document).ready(function(){
 
 
 function findDate() {
-    $searchDate = $('input').val();
-    console.log($searchDate);
+    $searchDate = $('input[type="date"]').val();
     $('tbody > tr').each(function(){
         $ts = $(this).children('td').eq(1);
         $timestamp = $ts.html();
@@ -116,4 +115,8 @@ function findDate() {
 
 $(document).ready(function(){
     $('#search button').click(findDate);
+    $('#search .close').click(function(){
+        $('#search').toggleClass('hide');
+        
+    });
 });
